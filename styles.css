@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 18px;
+}
+
+body{
+  background-color: rgb(255, 255, 255);
+}
+
+/* Navbar */
+
+/* Navbar */
+
+.header {
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 18px;
+    position: fixed;
+    top: 0;
+    z-index: 100; 
+  }
+
+.header #navbar-pinterest{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 16px 30px;
+
+}
+
+.header #navbar-pinterest .Img-ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header #navbar-pinterest .Img-ul ul{
+    display: flex;
+    justify-content: space-around;
+    margin: auto 0;
+}
+
+.header #navbar-pinterest .Img-ul ul li{
+    margin: auto 4.5px;
+    list-style: none;
+    padding: 5px;
+}
+
+.header #navbar-pinterest .Img-ul ul li a {
+    text-decoration: none;
+    color: black;
+    display: inline-block; 
+    padding: 10px 20px; 
+  }
+  .header #navbar-pinterest .Img-ul ul li:hover a {
+    background-color: black;
+    color: white;
+    border-radius: 17px;
+    padding: 5px 20px; 
+
+  }
+/* finder */
+
+.finder {
+    position: relative;
+    width: 800px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 45px;
+    background-color: rgb(227, 227, 227);
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: #777;
+    cursor: pointer;
+}
+
+/* icons */
+.header #navbar-pinterest .icons{
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pinterestlogo {
+    width: 40px;
+}
+
+#notifications{
+    width: 30px;
+    cursor: pointer;
+}
+
+#profile-img{
+    width: 30px;
+    cursor: pointer;
+}
+
+#messages{
+    width: 30px;
+    cursor: pointer;
+}
+
+/* main */
+
+#content{
+    width: 100%;
+    margin-top: 150px;
+}
+
+
+.cards-container {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+  columns: 5 220px;
+  gap: 25px;
+}
+
+.cards-container .card-image{
+    position: relative;
+    cursor: zoom-in;
+}
+
+.cards-container .card-image img{
+  max-width: 100%;
+  margin-bottom: 1em;
+  display: block;
+  outline: 2px solid white;
+  border-radius: 5%;
+}
+
+.card-image:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    background-color: rgb(156, 143, 131);
+  }
+
+
+  .card-image:hover::after {
+    content: "";
+    position: absolute;
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    border-radius: 5%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.card-image .btn-container {
+    opacity: 0;
+  }
+
+  .card-image:hover .btn-container {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    opacity: 100;
+  }
+
+
+  .btn-container{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+  }
+
+  .img-btn{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+ 
+  
+
+  .img-btn input{
+    background-color: red;
+    border-radius: 25px;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+  }
+
+
+
+  .options {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .options::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(222, 222, 222); 
+    border-radius: 50%;
+    z-index: -1; 
+  }
+
+  .options:hover::before {
+    background-color: rgb(188, 188, 188);   
+  }
+  
+  .options svg {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+  }
+
+
+  .share-icon{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 10px;
+    right: 70px;
+    cursor: pointer;
+  }
+
+  .share-icon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(231, 231, 231); 
+    border-radius: 50%;
+    z-index: -1; 
+  }
+
+  .share-icon:hover::before {
+    background-color: rgb(188, 188, 188);   
+  }
+
+  .share-icon svg {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+  }
+
+  .img-btn input:hover{
+    background-color: rgb(189, 0, 0);
+  }
+
+
+
+  
+
+ 
+
+
+

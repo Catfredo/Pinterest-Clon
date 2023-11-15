@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>Clon-Pinterest</title>
+</head>
+
+<body>
+    <header class="header">
+
+        <nav id="navbar-pinterest">
+
+            <div class="Img-ul">
+                <div class="icon"><a href="https://www.pinterest.com.mx/"><img
+                            src="https://th.bing.com/th/id/R.d3d175e560ae133f1ed5cd4ec173751a?rik=VFEimGFpHT5Puw&pid=ImgRaw&r=0"
+                            class="pinterestlogo" alt=""></a></div>
+
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Explorar</a></li>
+                    <li><a href="#">Crear</a></li>
+                </ul>
+            </div>
+
+
+            <div class="finder">
+                <input type="text" class="search-input" placeholder="Buscar en Pinterest">
+                <div class="search-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+
+
+            <div class="icons">
+
+                <div id="notifications">
+                    <?xml version="1.0" ?><svg id="Layer_1_1_" style="enable-background:new 0 0 16 16;" version="1.1"
+                        viewBox="0 0 16 16" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path d="M13,5c0-2.761-2.239-5-5-5S3,2.239,3,5v5l-3,2v1h16v-1l-3-2V5z" fill="#767676" />
+                        <path d="M10,14H6c0,1.105,0.895,2,2,2S10,15.105,10,14z" fill="#767676" />
+                    </svg>
+                </div>
+
+                <div id="messages">
+                    <?xml version="1.0" ?><svg class="message" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <title />
+                        <path
+                            d="M12.5,3A9.51,9.51,0,0,0,3,12.5a9.39,9.39,0,0,0,2.44,6.35l-2.29,2.3a.47.47,0,0,0-.11.54A.5.5,0,0,0,3.5,22h9a9.5,9.5,0,0,0,0-19Zm-4,11.5a1,1,0,1,1,1-1A1,1,0,0,1,8.5,14.5Zm4,0a1,1,0,1,1,1-1A1,1,0,0,1,12.5,14.5Zm4,0a1,1,0,1,1,1-1A1,1,0,0,1,16.5,14.5Z"
+                            fill="#767676" />
+                    </svg>
+                </div>
+                <div id="profile-img">
+                    <?xml version="1.0" ?><svg style="enable-background:new 0 0 24 24;" version="1.1"
+                        viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="info" />
+                        <g id="icons">
+                            <g id="user">
+                                <ellipse cx="12" cy="8" rx="5" ry="6" fill="#767676" />
+                                <path
+                                    d="M21.8,19.1c-0.9-1.8-2.6-3.3-4.8-4.2c-0.6-0.2-1.3-0.2-1.8,0.1c-1,0.6-2,0.9-3.2,0.9s-2.2-0.3-3.2-0.9    C8.3,14.8,7.6,14.7,7,15c-2.2,0.9-3.9,2.4-4.8,4.2C1.5,20.5,2.6,22,4.1,22h15.8C21.4,22,22.5,20.5,21.8,19.1z"
+                                    fill="#767676" />
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <main id="content">
+
+        <div class="cards-container">
+            <div class="card-image">
+
+                <div class="btn-container">
+                    <div class="img-btn">
+                        <input type="button" value="Guardar">
+                    </div>
+                    <div class="share-options">
+                        <div class="share-icon">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                enable-background="new 0 0 48 48" height="48px" id="Layer_1" version="1.1"
+                                viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path clip-rule="evenodd"
+                                    d="M34,47H14c-2.762,0-5-2.238-5-5V24c0-2.761,2.238-5,5-5h4c0.553,0,1,0.448,1,1  s-0.447,1-1,1h-4c-1.656,0-3,1.344-3,3v18c0,1.657,1.344,3,3,3h20c1.657,0,3-1.343,3-3V24c0-1.656-1.343-3-3-3h-4  c-0.553,0-1-0.448-1-1s0.447-1,1-1h4c2.762,0,5,2.239,5,5v18C39,44.762,36.762,47,34,47z M31.334,10.715L25,4.381V30  c0,0.553-0.447,1-1,1s-1-0.447-1-1V4.381l-6.334,6.334c-0.381,0.381-0.999,0.381-1.381,0c-0.381-0.381-0.381-1,0-1.381l7.905-7.905  c0.032-0.047,0.053-0.101,0.095-0.144c0.195-0.194,0.451-0.287,0.705-0.283C23.994,1.002,23.996,1,24,1s0.007,0.002,0.01,0.002  c0.256-0.003,0.511,0.089,0.705,0.283c0.041,0.042,0.06,0.094,0.091,0.14l7.909,7.909c0.381,0.381,0.381,1,0,1.381  C32.333,11.096,31.715,11.096,31.334,10.715z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+        
+                        <div class="options">
+                            <?xml version="1.0" ?><svg class="bi bi-three-dots" fill="currentColor" height="20"
+                                viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://vignette.wikia.nocookie.net/aggretsuko/images/e/eb/Retsuko.jpg/revision/latest/scale-to-width-down/2000?cb=20180511190141"
+                    alt="1">
+            </div>
+
+            <div class="card-image">
+                <div class="btn-container">
+                    <div class="img-btn">
+                        <input type="button" value="Guardar">
+                    </div>
+                    <div class="share-options">
+                        <div class="share-icon">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                enable-background="new 0 0 48 48" height="48px" id="Layer_1" version="1.1"
+                                viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path clip-rule="evenodd"
+                                    d="M34,47H14c-2.762,0-5-2.238-5-5V24c0-2.761,2.238-5,5-5h4c0.553,0,1,0.448,1,1  s-0.447,1-1,1h-4c-1.656,0-3,1.344-3,3v18c0,1.657,1.344,3,3,3h20c1.657,0,3-1.343,3-3V24c0-1.656-1.343-3-3-3h-4  c-0.553,0-1-0.448-1-1s0.447-1,1-1h4c2.762,0,5,2.239,5,5v18C39,44.762,36.762,47,34,47z M31.334,10.715L25,4.381V30  c0,0.553-0.447,1-1,1s-1-0.447-1-1V4.381l-6.334,6.334c-0.381,0.381-0.999,0.381-1.381,0c-0.381-0.381-0.381-1,0-1.381l7.905-7.905  c0.032-0.047,0.053-0.101,0.095-0.144c0.195-0.194,0.451-0.287,0.705-0.283C23.994,1.002,23.996,1,24,1s0.007,0.002,0.01,0.002  c0.256-0.003,0.511,0.089,0.705,0.283c0.041,0.042,0.06,0.094,0.091,0.14l7.909,7.909c0.381,0.381,0.381,1,0,1.381  C32.333,11.096,31.715,11.096,31.334,10.715z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+        
+                        <div class="options">
+                            <?xml version="1.0" ?><svg class="bi bi-three-dots" fill="currentColor" height="20"
+                                viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://i.pinimg.com/564x/41/d0/3e/41d03e2b0188b4292aee8387fb2356c2.jpg" alt="2">
+
+            </div>
+            <div class="card-image">
+                <div class="btn-container">
+                    <div class="img-btn">
+                        <input type="button" value="Guardar">
+                    </div>
+                    <div class="share-options">
+                        <div class="share-icon">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                enable-background="new 0 0 48 48" height="48px" id="Layer_1" version="1.1"
+                                viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path clip-rule="evenodd"
+                                    d="M34,47H14c-2.762,0-5-2.238-5-5V24c0-2.761,2.238-5,5-5h4c0.553,0,1,0.448,1,1  s-0.447,1-1,1h-4c-1.656,0-3,1.344-3,3v18c0,1.657,1.344,3,3,3h20c1.657,0,3-1.343,3-3V24c0-1.656-1.343-3-3-3h-4  c-0.553,0-1-0.448-1-1s0.447-1,1-1h4c2.762,0,5,2.239,5,5v18C39,44.762,36.762,47,34,47z M31.334,10.715L25,4.381V30  c0,0.553-0.447,1-1,1s-1-0.447-1-1V4.381l-6.334,6.334c-0.381,0.381-0.999,0.381-1.381,0c-0.381-0.381-0.381-1,0-1.381l7.905-7.905  c0.032-0.047,0.053-0.101,0.095-0.144c0.195-0.194,0.451-0.287,0.705-0.283C23.994,1.002,23.996,1,24,1s0.007,0.002,0.01,0.002  c0.256-0.003,0.511,0.089,0.705,0.283c0.041,0.042,0.06,0.094,0.091,0.14l7.909,7.909c0.381,0.381,0.381,1,0,1.381  C32.333,11.096,31.715,11.096,31.334,10.715z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+        
+                        <div class="options">
+                            <?xml version="1.0" ?><svg class="bi bi-three-dots" fill="currentColor" height="20"
+                                viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://i.pinimg.com/564x/62/26/1e/62261eed20dadf51eeb68f57b12b00b9.jpg" alt="3">
+
+            </div>
+            <div class="card-image">
+                <div class="btn-container">
+                    <div class="img-btn">
+                        <input type="button" value="Guardar">
+                    </div>
+                    <div class="share-options">
+                        <div class="share-icon">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                enable-background="new 0 0 48 48" height="48px" id="Layer_1" version="1.1"
+                                viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path clip-rule="evenodd"
+                                    d="M34,47H14c-2.762,0-5-2.238-5-5V24c0-2.761,2.238-5,5-5h4c0.553,0,1,0.448,1,1  s-0.447,1-1,1h-4c-1.656,0-3,1.344-3,3v18c0,1.657,1.344,3,3,3h20c1.657,0,3-1.343,3-3V24c0-1.656-1.343-3-3-3h-4  c-0.553,0-1-0.448-1-1s0.447-1,1-1h4c2.762,0,5,2.239,5,5v18C39,44.762,36.762,47,34,47z M31.334,10.715L25,4.381V30  c0,0.553-0.447,1-1,1s-1-0.447-1-1V4.381l-6.334,6.334c-0.381,0.381-0.999,0.381-1.381,0c-0.381-0.381-0.381-1,0-1.381l7.905-7.905  c0.032-0.047,0.053-0.101,0.095-0.144c0.195-0.194,0.451-0.287,0.705-0.283C23.994,1.002,23.996,1,24,1s0.007,0.002,0.01,0.002  c0.256-0.003,0.511,0.089,0.705,0.283c0.041,0.042,0.06,0.094,0.091,0.14l7.909,7.909c0.381,0.381,0.381,1,0,1.381  C32.333,11.096,31.715,11.096,31.334,10.715z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+        
+                        <div class="options">
+                            <?xml version="1.0" ?><svg class="bi bi-three-dots" fill="currentColor" height="20"
+                                viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://i.pinimg.com/564x/34/20/d4/3420d4bf2356a485799bf2c23368266c.jpg" alt="4">
+
+            </div>
+            <div class="card-image">
+                <div class="btn-container">
+                    <div class="img-btn">
+                        <input type="button" value="Guardar">
+                    </div>
+                    <div class="share-options">
+                        <div class="share-icon">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                enable-background="new 0 0 48 48" height="48px" id="Layer_1" version="1.1"
+                                viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path clip-rule="evenodd"
+                                    d="M34,47H14c-2.762,0-5-2.238-5-5V24c0-2.761,2.238-5,5-5h4c0.553,0,1,0.448,1,1  s-0.447,1-1,1h-4c-1.656,0-3,1.344-3,3v18c0,1.657,1.344,3,3,3h20c1.657,0,3-1.343,3-3V24c0-1.656-1.343-3-3-3h-4  c-0.553,0-1-0.448-1-1s0.447-1,1-1h4c2.762,0,5,2.239,5,5v18C39,44.762,36.762,47,34,47z M31.334,10.715L25,4.381V30  c0,0.553-0.447,1-1,1s-1-0.447-1-1V4.381l-6.334,6.334c-0.381,0.381-0.999,0.381-1.381,0c-0.381-0.381-0.381-1,0-1.381l7.905-7.905  c0.032-0.047,0.053-0.101,0.095-0.144c0.195-0.194,0.451-0.287,0.705-0.283C23.994,1.002,23.996,1,24,1s0.007,0.002,0.01,0.002  c0.256-0.003,0.511,0.089,0.705,0.283c0.041,0.042,0.06,0.094,0.091,0.14l7.909,7.909c0.381,0.381,0.381,1,0,1.381  C32.333,11.096,31.715,11.096,31.334,10.715z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+        
+                        <div class="options">
+                            <?xml version="1.0" ?><svg class="bi bi-three-dots" fill="currentColor" height="20"
+                                viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://i.pinimg.com/564x/24/cf/8a/24cf8acd4169f2df3ded5d8786dc429e.jpg" alt="5">
+
+            </div>
+            <div class="card-image">
+                <div class="btn-container">
+                    <div class="img-btn">
+                        <input type="button" value="Guardar">
+                    </div>
+                    <div class="share-options">
+                        <div class="share-icon">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                enable-background="new 0 0 48 48" height="48px" id="Layer_1" version="1.1"
+                                viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path clip-rule="evenodd"
+                                    d="M34,47H14c-2.762,0-5-2.238-5-5V24c0-2.761,2.238-5,5-5h4c0.553,0,1,0.448,1,1  s-0.447,1-1,1h-4c-1.656,0-3,1.344-3,3v18c0,1.657,1.344,3,3,3h20c1.657,0,3-1.343,3-3V24c0-1.656-1.343-3-3-3h-4  c-0.553,0-1-0.448-1-1s0.447-1,1-1h4c2.762,0,5,2.239,5,5v18C39,44.762,36.762,47,34,47z M31.334,10.715L25,4.381V30  c0,0.553-0.447,1-1,1s-1-0.447-1-1V4.381l-6.334,6.334c-0.381,0.381-0.999,0.381-1.381,0c-0.381-0.381-0.381-1,0-1.381l7.905-7.905  c0.032-0.047,0.053-0.101,0.095-0.144c0.195-0.194,0.451-0.287,0.705-0.283C23.994,1.002,23.996,1,24,1s0.007,0.002,0.01,0.002  c0.256-0.003,0.511,0.089,0.705,0.283c0.041,0.042,0.06,0.094,0.091,0.14l7.909,7.909c0.381,0.381,0.381,1,0,1.381  C32.333,11.096,31.715,11.096,31.334,10.715z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+        
+                        <div class="options">
+                            <?xml version="1.0" ?><svg class="bi bi-three-dots" fill="currentColor" height="20"
+                                viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://i.pinimg.com/564x/e7/71/f6/e771f6581c14e35ed4e17fc81bf9312e.jpg" alt="6">
+
+            </div>
+            <div class="card-image">
+                <div class="btn-container">
+                    <div class="img-btn">
+                        <input type="button" value="Guardar">
+                    </div>
+                    <div class="share-options">
+                        <div class="share-icon">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                enable-background="new 0 0 48 48" height="48px" id="Layer_1" version="1.1"
+                                viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path clip-rule="evenodd"
+                                    d="M34,47H14c-2.762,0-5-2.238-5-5V24c0-2.761,2.238-5,5-5h4c0.553,0,1,0.448,1,1  s-0.447,1-1,1h-4c-1.656,0-3,1.344-3,3v18c0,1.657,1.344,3,3,3h20c1.657,0,3-1.343,3-3V24c0-1.656-1.343-3-3-3h-4  c-0.553,0-1-0.448-1-1s0.447-1,1-1h4c2.762,0,5,2.239,5,5v18C39,44.762,36.762,47,34,47z M31.334,10.715L25,4.381V30  c0,0.553-0.447,1-1,1s-1-0.447-1-1V4.381l-6.334,6.334c-0.381,0.381-0.999,0.381-1.381,0c-0.381-0.381-0.381-1,0-1.381l7.905-7.905  c0.032-0.047,0.053-0.101,0.095-0.144c0.195-0.194,0.451-0.287,0.705-0.283C23.994,1.002,23.996,1,24,1s0.007,0.002,0.01,0.002  c0.256-0.003,0.511,0.089,0.705,0.283c0.041,0.042,0.06,0.094,0.091,0.14l7.909,7.909c0.381,0.381,0.381,1,0,1.381  C32.333,11.096,31.715,11.096,31.334,10.715z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+        
+                        <div class="options">
+                            <?xml version="1.0" ?><svg class="bi bi-three-dots" fill="currentColor" height="20"
+                                viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://i.pinimg.com/564x/10/68/b7/1068b7fb23c928b98bf5bcfe6bf723cf.jpg" alt="7">
+
+            </div>
+            <div class="card-image">
+                <div class="btn-container">
+                    <div class="img-btn">
+                        <input type="button" value="Guardar">
+                    </div>
+                    <div class="share-options">
+                        <div class="share-icon">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                enable-background="new 0 0 48 48" height="48px" id="Layer_1" version="1.1"
+                                viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path clip-rule="evenodd"
+                                    d="M34,47H14c-2.762,0-5-2.238-5-5V24c0-2.761,2.238-5,5-5h4c0.553,0,1,0.448,1,1  s-0.447,1-1,1h-4c-1.656,0-3,1.344-3,3v18c0,1.657,1.344,3,3,3h20c1.657,0,3-1.343,3-3V24c0-1.656-1.343-3-3-3h-4  c-0.553,0-1-0.448-1-1s0.447-1,1-1h4c2.762,0,5,2.239,5,5v18C39,44.762,36.762,47,34,47z M31.334,10.715L25,4.381V30  c0,0.553-0.447,1-1,1s-1-0.447-1-1V4.381l-6.334,6.334c-0.381,0.381-0.999,0.381-1.381,0c-0.381-0.381-0.381-1,0-1.381l7.905-7.905  c0.032-0.047,0.053-0.101,0.095-0.144c0.195-0.194,0.451-0.287,0.705-0.283C23.994,1.002,23.996,1,24,1s0.007,0.002,0.01,0.002  c0.256-0.003,0.511,0.089,0.705,0.283c0.041,0.042,0.06,0.094,0.091,0.14l7.909,7.909c0.381,0.381,0.381,1,0,1.381  C32.333,11.096,31.715,11.096,31.334,10.715z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+        
+                        <div class="options">
+                            <?xml version="1.0" ?><svg class="bi bi-three-dots" fill="currentColor" height="20"
+                                viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://i.pinimg.com/564x/1f/90/7d/1f907d6ba68b375af9a96ccadd753ad8.jpg" alt="8">
+
+            </div>
+            <div class="card-image">
+                <div class="btn-container">
+                    <div class="img-btn">
+                        <input type="button" value="Guardar">
+                    </div>
+                    <div class="share-options">
+                        <div class="share-icon">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                enable-background="new 0 0 48 48" height="48px" id="Layer_1" version="1.1"
+                                viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path clip-rule="evenodd"
+                                    d="M34,47H14c-2.762,0-5-2.238-5-5V24c0-2.761,2.238-5,5-5h4c0.553,0,1,0.448,1,1  s-0.447,1-1,1h-4c-1.656,0-3,1.344-3,3v18c0,1.657,1.344,3,3,3h20c1.657,0,3-1.343,3-3V24c0-1.656-1.343-3-3-3h-4  c-0.553,0-1-0.448-1-1s0.447-1,1-1h4c2.762,0,5,2.239,5,5v18C39,44.762,36.762,47,34,47z M31.334,10.715L25,4.381V30  c0,0.553-0.447,1-1,1s-1-0.447-1-1V4.381l-6.334,6.334c-0.381,0.381-0.999,0.381-1.381,0c-0.381-0.381-0.381-1,0-1.381l7.905-7.905  c0.032-0.047,0.053-0.101,0.095-0.144c0.195-0.194,0.451-0.287,0.705-0.283C23.994,1.002,23.996,1,24,1s0.007,0.002,0.01,0.002  c0.256-0.003,0.511,0.089,0.705,0.283c0.041,0.042,0.06,0.094,0.091,0.14l7.909,7.909c0.381,0.381,0.381,1,0,1.381  C32.333,11.096,31.715,11.096,31.334,10.715z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+        
+                        <div class="options">
+                            <?xml version="1.0" ?><svg class="bi bi-three-dots" fill="currentColor" height="20"
+                                viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://i.pinimg.com/564x/f6/50/37/f6503797ce70b207e6ad2b87ab8d4923.jpg" alt="9">
+
+            </div>
+            <div class="card-image">
+                <div class="btn-container">
+                    <div class="img-btn">
+                        <input type="button" value="Guardar">
+                    </div>
+                    <div class="share-options">
+                        <div class="share-icon">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                enable-background="new 0 0 48 48" height="48px" id="Layer_1" version="1.1"
+                                viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path clip-rule="evenodd"
+                                    d="M34,47H14c-2.762,0-5-2.238-5-5V24c0-2.761,2.238-5,5-5h4c0.553,0,1,0.448,1,1  s-0.447,1-1,1h-4c-1.656,0-3,1.344-3,3v18c0,1.657,1.344,3,3,3h20c1.657,0,3-1.343,3-3V24c0-1.656-1.343-3-3-3h-4  c-0.553,0-1-0.448-1-1s0.447-1,1-1h4c2.762,0,5,2.239,5,5v18C39,44.762,36.762,47,34,47z M31.334,10.715L25,4.381V30  c0,0.553-0.447,1-1,1s-1-0.447-1-1V4.381l-6.334,6.334c-0.381,0.381-0.999,0.381-1.381,0c-0.381-0.381-0.381-1,0-1.381l7.905-7.905  c0.032-0.047,0.053-0.101,0.095-0.144c0.195-0.194,0.451-0.287,0.705-0.283C23.994,1.002,23.996,1,24,1s0.007,0.002,0.01,0.002  c0.256-0.003,0.511,0.089,0.705,0.283c0.041,0.042,0.06,0.094,0.091,0.14l7.909,7.909c0.381,0.381,0.381,1,0,1.381  C32.333,11.096,31.715,11.096,31.334,10.715z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+        
+                        <div class="options">
+                            <?xml version="1.0" ?><svg class="bi bi-three-dots" fill="currentColor" height="20"
+                                viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://i.pinimg.com/564x/33/88/9d/33889d8f5e4d558c7b551930711adadb.jpg" alt="10">
+
+            </div>
+
+            <div class="card-image ">
+                <div class="btn-container">
+                    <div class="img-btn">
+                        <input type="button" value="Guardar">
+                    </div>
+                    <div class="share-options">
+                        <div class="share-icon">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                enable-background="new 0 0 48 48" height="48px" id="Layer_1" version="1.1"
+                                viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path clip-rule="evenodd"
+                                    d="M34,47H14c-2.762,0-5-2.238-5-5V24c0-2.761,2.238-5,5-5h4c0.553,0,1,0.448,1,1  s-0.447,1-1,1h-4c-1.656,0-3,1.344-3,3v18c0,1.657,1.344,3,3,3h20c1.657,0,3-1.343,3-3V24c0-1.656-1.343-3-3-3h-4  c-0.553,0-1-0.448-1-1s0.447-1,1-1h4c2.762,0,5,2.239,5,5v18C39,44.762,36.762,47,34,47z M31.334,10.715L25,4.381V30  c0,0.553-0.447,1-1,1s-1-0.447-1-1V4.381l-6.334,6.334c-0.381,0.381-0.999,0.381-1.381,0c-0.381-0.381-0.381-1,0-1.381l7.905-7.905  c0.032-0.047,0.053-0.101,0.095-0.144c0.195-0.194,0.451-0.287,0.705-0.283C23.994,1.002,23.996,1,24,1s0.007,0.002,0.01,0.002  c0.256-0.003,0.511,0.089,0.705,0.283c0.041,0.042,0.06,0.094,0.091,0.14l7.909,7.909c0.381,0.381,0.381,1,0,1.381  C32.333,11.096,31.715,11.096,31.334,10.715z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+        
+                        <div class="options">
+                            <?xml version="1.0" ?><svg class="bi bi-three-dots" fill="currentColor" height="20"
+                                viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://i.pinimg.com/564x/38/15/7e/38157edf01f574e1884b112bdcfa67e6.jpg" alt="12">
+            </div>
+
+            <div class="card-image">
+                <div class="btn-container">
+                    <div class="img-btn">
+                        <input type="button" value="Guardar">
+                    </div>
+                    <div class="share-options">
+                        <div class="share-icon">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                enable-background="new 0 0 48 48" height="48px" id="Layer_1" version="1.1"
+                                viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path clip-rule="evenodd"
+                                    d="M34,47H14c-2.762,0-5-2.238-5-5V24c0-2.761,2.238-5,5-5h4c0.553,0,1,0.448,1,1  s-0.447,1-1,1h-4c-1.656,0-3,1.344-3,3v18c0,1.657,1.344,3,3,3h20c1.657,0,3-1.343,3-3V24c0-1.656-1.343-3-3-3h-4  c-0.553,0-1-0.448-1-1s0.447-1,1-1h4c2.762,0,5,2.239,5,5v18C39,44.762,36.762,47,34,47z M31.334,10.715L25,4.381V30  c0,0.553-0.447,1-1,1s-1-0.447-1-1V4.381l-6.334,6.334c-0.381,0.381-0.999,0.381-1.381,0c-0.381-0.381-0.381-1,0-1.381l7.905-7.905  c0.032-0.047,0.053-0.101,0.095-0.144c0.195-0.194,0.451-0.287,0.705-0.283C23.994,1.002,23.996,1,24,1s0.007,0.002,0.01,0.002  c0.256-0.003,0.511,0.089,0.705,0.283c0.041,0.042,0.06,0.094,0.091,0.14l7.909,7.909c0.381,0.381,0.381,1,0,1.381  C32.333,11.096,31.715,11.096,31.334,10.715z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+        
+                        <div class="options">
+                            <?xml version="1.0" ?><svg class="bi bi-three-dots" fill="currentColor" height="20"
+                                viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://i.pinimg.com/564x/fa/02/63/fa02634e0b7ce2c605cd41c205a01810.jpg" alt="13">
+            </div>
+
+            <div class="card-image">
+                <div class="btn-container">
+                    <div class="img-btn">
+                        <input type="button" value="Guardar">
+                    </div>
+                    <div class="share-options">
+                        <div class="share-icon">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                enable-background="new 0 0 48 48" height="48px" id="Layer_1" version="1.1"
+                                viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path clip-rule="evenodd"
+                                    d="M34,47H14c-2.762,0-5-2.238-5-5V24c0-2.761,2.238-5,5-5h4c0.553,0,1,0.448,1,1  s-0.447,1-1,1h-4c-1.656,0-3,1.344-3,3v18c0,1.657,1.344,3,3,3h20c1.657,0,3-1.343,3-3V24c0-1.656-1.343-3-3-3h-4  c-0.553,0-1-0.448-1-1s0.447-1,1-1h4c2.762,0,5,2.239,5,5v18C39,44.762,36.762,47,34,47z M31.334,10.715L25,4.381V30  c0,0.553-0.447,1-1,1s-1-0.447-1-1V4.381l-6.334,6.334c-0.381,0.381-0.999,0.381-1.381,0c-0.381-0.381-0.381-1,0-1.381l7.905-7.905  c0.032-0.047,0.053-0.101,0.095-0.144c0.195-0.194,0.451-0.287,0.705-0.283C23.994,1.002,23.996,1,24,1s0.007,0.002,0.01,0.002  c0.256-0.003,0.511,0.089,0.705,0.283c0.041,0.042,0.06,0.094,0.091,0.14l7.909,7.909c0.381,0.381,0.381,1,0,1.381  C32.333,11.096,31.715,11.096,31.334,10.715z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+        
+                        <div class="options">
+                            <?xml version="1.0" ?><svg class="bi bi-three-dots" fill="currentColor" height="20"
+                                viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://i.pinimg.com/564x/65/2c/2f/652c2f02134c882c5259f0d85cefa09b.jpg" alt="14">
+            </div>
+
+            <div class="card-image">
+                <div class="btn-container">
+                    <div class="img-btn">
+                        <input type="button" value="Guardar">
+                    </div>
+                    <div class="share-options">
+                        <div class="share-icon">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                enable-background="new 0 0 48 48" height="48px" id="Layer_1" version="1.1"
+                                viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path clip-rule="evenodd"
+                                    d="M34,47H14c-2.762,0-5-2.238-5-5V24c0-2.761,2.238-5,5-5h4c0.553,0,1,0.448,1,1  s-0.447,1-1,1h-4c-1.656,0-3,1.344-3,3v18c0,1.657,1.344,3,3,3h20c1.657,0,3-1.343,3-3V24c0-1.656-1.343-3-3-3h-4  c-0.553,0-1-0.448-1-1s0.447-1,1-1h4c2.762,0,5,2.239,5,5v18C39,44.762,36.762,47,34,47z M31.334,10.715L25,4.381V30  c0,0.553-0.447,1-1,1s-1-0.447-1-1V4.381l-6.334,6.334c-0.381,0.381-0.999,0.381-1.381,0c-0.381-0.381-0.381-1,0-1.381l7.905-7.905  c0.032-0.047,0.053-0.101,0.095-0.144c0.195-0.194,0.451-0.287,0.705-0.283C23.994,1.002,23.996,1,24,1s0.007,0.002,0.01,0.002  c0.256-0.003,0.511,0.089,0.705,0.283c0.041,0.042,0.06,0.094,0.091,0.14l7.909,7.909c0.381,0.381,0.381,1,0,1.381  C32.333,11.096,31.715,11.096,31.334,10.715z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+        
+                        <div class="options">
+                            <?xml version="1.0" ?><svg class="bi bi-three-dots" fill="currentColor" height="20"
+                                viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://i.pinimg.com/564x/c0/f7/91/c0f79198e9bae8d1c973389dedfecac5.jpg" alt="15">
+            </div>
+
+            <div class="card-image">
+                <div class="btn-container">
+                    <div class="img-btn">
+                        <input type="button" value="Guardar">
+                    </div>
+                    <div class="share-options">
+                        <div class="share-icon">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                enable-background="new 0 0 48 48" height="48px" id="Layer_1" version="1.1"
+                                viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path clip-rule="evenodd"
+                                    d="M34,47H14c-2.762,0-5-2.238-5-5V24c0-2.761,2.238-5,5-5h4c0.553,0,1,0.448,1,1  s-0.447,1-1,1h-4c-1.656,0-3,1.344-3,3v18c0,1.657,1.344,3,3,3h20c1.657,0,3-1.343,3-3V24c0-1.656-1.343-3-3-3h-4  c-0.553,0-1-0.448-1-1s0.447-1,1-1h4c2.762,0,5,2.239,5,5v18C39,44.762,36.762,47,34,47z M31.334,10.715L25,4.381V30  c0,0.553-0.447,1-1,1s-1-0.447-1-1V4.381l-6.334,6.334c-0.381,0.381-0.999,0.381-1.381,0c-0.381-0.381-0.381-1,0-1.381l7.905-7.905  c0.032-0.047,0.053-0.101,0.095-0.144c0.195-0.194,0.451-0.287,0.705-0.283C23.994,1.002,23.996,1,24,1s0.007,0.002,0.01,0.002  c0.256-0.003,0.511,0.089,0.705,0.283c0.041,0.042,0.06,0.094,0.091,0.14l7.909,7.909c0.381,0.381,0.381,1,0,1.381  C32.333,11.096,31.715,11.096,31.334,10.715z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+        
+                        <div class="options">
+                            <?xml version="1.0" ?><svg class="bi bi-three-dots" fill="currentColor" height="20"
+                                viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://i.pinimg.com/736x/cf/67/b0/cf67b0948fefac8d0719d39cdc356650.jpg" alt="16">
+            </div>
+
+            <div class="card-image">
+                <div class="btn-container">
+                    <div class="img-btn">
+                        <input type="button" value="Guardar">
+                    </div>
+                    <div class="share-options">
+                        <div class="share-icon">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                enable-background="new 0 0 48 48" height="48px" id="Layer_1" version="1.1"
+                                viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path clip-rule="evenodd"
+                                    d="M34,47H14c-2.762,0-5-2.238-5-5V24c0-2.761,2.238-5,5-5h4c0.553,0,1,0.448,1,1  s-0.447,1-1,1h-4c-1.656,0-3,1.344-3,3v18c0,1.657,1.344,3,3,3h20c1.657,0,3-1.343,3-3V24c0-1.656-1.343-3-3-3h-4  c-0.553,0-1-0.448-1-1s0.447-1,1-1h4c2.762,0,5,2.239,5,5v18C39,44.762,36.762,47,34,47z M31.334,10.715L25,4.381V30  c0,0.553-0.447,1-1,1s-1-0.447-1-1V4.381l-6.334,6.334c-0.381,0.381-0.999,0.381-1.381,0c-0.381-0.381-0.381-1,0-1.381l7.905-7.905  c0.032-0.047,0.053-0.101,0.095-0.144c0.195-0.194,0.451-0.287,0.705-0.283C23.994,1.002,23.996,1,24,1s0.007,0.002,0.01,0.002  c0.256-0.003,0.511,0.089,0.705,0.283c0.041,0.042,0.06,0.094,0.091,0.14l7.909,7.909c0.381,0.381,0.381,1,0,1.381  C32.333,11.096,31.715,11.096,31.334,10.715z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+        
+                        <div class="options">
+                            <?xml version="1.0" ?><svg class="bi bi-three-dots" fill="currentColor" height="20"
+                                viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://i.pinimg.com/564x/13/6e/56/136e5679b6b46d3d838cab3afe23284a.jpg" alt="17">
+            </div>
+
+            <div class="card-image">
+                <div class="btn-container">
+                    <div class="img-btn">
+                        <input type="button" value="Guardar">
+                    </div>
+                    <div class="share-options">
+                        <div class="share-icon">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                enable-background="new 0 0 48 48" height="48px" id="Layer_1" version="1.1"
+                                viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path clip-rule="evenodd"
+                                    d="M34,47H14c-2.762,0-5-2.238-5-5V24c0-2.761,2.238-5,5-5h4c0.553,0,1,0.448,1,1  s-0.447,1-1,1h-4c-1.656,0-3,1.344-3,3v18c0,1.657,1.344,3,3,3h20c1.657,0,3-1.343,3-3V24c0-1.656-1.343-3-3-3h-4  c-0.553,0-1-0.448-1-1s0.447-1,1-1h4c2.762,0,5,2.239,5,5v18C39,44.762,36.762,47,34,47z M31.334,10.715L25,4.381V30  c0,0.553-0.447,1-1,1s-1-0.447-1-1V4.381l-6.334,6.334c-0.381,0.381-0.999,0.381-1.381,0c-0.381-0.381-0.381-1,0-1.381l7.905-7.905  c0.032-0.047,0.053-0.101,0.095-0.144c0.195-0.194,0.451-0.287,0.705-0.283C23.994,1.002,23.996,1,24,1s0.007,0.002,0.01,0.002  c0.256-0.003,0.511,0.089,0.705,0.283c0.041,0.042,0.06,0.094,0.091,0.14l7.909,7.909c0.381,0.381,0.381,1,0,1.381  C32.333,11.096,31.715,11.096,31.334,10.715z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+        
+                        <div class="options">
+                            <?xml version="1.0" ?><svg class="bi bi-three-dots" fill="currentColor" height="20"
+                                viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://i.pinimg.com/564x/16/b8/f9/16b8f98b35e3544d62b0b51a2fed011b.jpg" alt="18">
+            </div>
+            <div class="card-image">
+                <div class="btn-container">
+                    <div class="img-btn">
+                        <input type="button" value="Guardar">
+                    </div>
+                    <div class="share-options">
+                        <div class="share-icon">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                enable-background="new 0 0 48 48" height="48px" id="Layer_1" version="1.1"
+                                viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path clip-rule="evenodd"
+                                    d="M34,47H14c-2.762,0-5-2.238-5-5V24c0-2.761,2.238-5,5-5h4c0.553,0,1,0.448,1,1  s-0.447,1-1,1h-4c-1.656,0-3,1.344-3,3v18c0,1.657,1.344,3,3,3h20c1.657,0,3-1.343,3-3V24c0-1.656-1.343-3-3-3h-4  c-0.553,0-1-0.448-1-1s0.447-1,1-1h4c2.762,0,5,2.239,5,5v18C39,44.762,36.762,47,34,47z M31.334,10.715L25,4.381V30  c0,0.553-0.447,1-1,1s-1-0.447-1-1V4.381l-6.334,6.334c-0.381,0.381-0.999,0.381-1.381,0c-0.381-0.381-0.381-1,0-1.381l7.905-7.905  c0.032-0.047,0.053-0.101,0.095-0.144c0.195-0.194,0.451-0.287,0.705-0.283C23.994,1.002,23.996,1,24,1s0.007,0.002,0.01,0.002  c0.256-0.003,0.511,0.089,0.705,0.283c0.041,0.042,0.06,0.094,0.091,0.14l7.909,7.909c0.381,0.381,0.381,1,0,1.381  C32.333,11.096,31.715,11.096,31.334,10.715z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+        
+                        <div class="options">
+                            <?xml version="1.0" ?><svg class="bi bi-three-dots" fill="currentColor" height="20"
+                                viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://i.pinimg.com/236x/c0/6e/5d/c06e5d64b885bef694977fe211e12517.jpg" alt="19">
+            </div>
+            <div class="card-image">
+                <div class="btn-container">
+                    <div class="img-btn">
+                        <input type="button" value="Guardar">
+                    </div>
+                    <div class="share-options">
+                        <div class="share-icon">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                enable-background="new 0 0 48 48" height="48px" id="Layer_1" version="1.1"
+                                viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path clip-rule="evenodd"
+                                    d="M34,47H14c-2.762,0-5-2.238-5-5V24c0-2.761,2.238-5,5-5h4c0.553,0,1,0.448,1,1  s-0.447,1-1,1h-4c-1.656,0-3,1.344-3,3v18c0,1.657,1.344,3,3,3h20c1.657,0,3-1.343,3-3V24c0-1.656-1.343-3-3-3h-4  c-0.553,0-1-0.448-1-1s0.447-1,1-1h4c2.762,0,5,2.239,5,5v18C39,44.762,36.762,47,34,47z M31.334,10.715L25,4.381V30  c0,0.553-0.447,1-1,1s-1-0.447-1-1V4.381l-6.334,6.334c-0.381,0.381-0.999,0.381-1.381,0c-0.381-0.381-0.381-1,0-1.381l7.905-7.905  c0.032-0.047,0.053-0.101,0.095-0.144c0.195-0.194,0.451-0.287,0.705-0.283C23.994,1.002,23.996,1,24,1s0.007,0.002,0.01,0.002  c0.256-0.003,0.511,0.089,0.705,0.283c0.041,0.042,0.06,0.094,0.091,0.14l7.909,7.909c0.381,0.381,0.381,1,0,1.381  C32.333,11.096,31.715,11.096,31.334,10.715z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+        
+                        <div class="options">
+                            <?xml version="1.0" ?><svg class="bi bi-three-dots" fill="currentColor" height="20"
+                                viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://i.pinimg.com/564x/15/55/a4/1555a41894e1524b668a820450ee7511.jpg" alt="20">
+
+            </div>
+            <div class="card-image">
+                <div class="btn-container">
+                    <div class="img-btn">
+                        <input type="button" value="Guardar">
+                    </div>
+                    <div class="share-options">
+                        <div class="share-icon">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                enable-background="new 0 0 48 48" height="48px" id="Layer_1" version="1.1"
+                                viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path clip-rule="evenodd"
+                                    d="M34,47H14c-2.762,0-5-2.238-5-5V24c0-2.761,2.238-5,5-5h4c0.553,0,1,0.448,1,1  s-0.447,1-1,1h-4c-1.656,0-3,1.344-3,3v18c0,1.657,1.344,3,3,3h20c1.657,0,3-1.343,3-3V24c0-1.656-1.343-3-3-3h-4  c-0.553,0-1-0.448-1-1s0.447-1,1-1h4c2.762,0,5,2.239,5,5v18C39,44.762,36.762,47,34,47z M31.334,10.715L25,4.381V30  c0,0.553-0.447,1-1,1s-1-0.447-1-1V4.381l-6.334,6.334c-0.381,0.381-0.999,0.381-1.381,0c-0.381-0.381-0.381-1,0-1.381l7.905-7.905  c0.032-0.047,0.053-0.101,0.095-0.144c0.195-0.194,0.451-0.287,0.705-0.283C23.994,1.002,23.996,1,24,1s0.007,0.002,0.01,0.002  c0.256-0.003,0.511,0.089,0.705,0.283c0.041,0.042,0.06,0.094,0.091,0.14l7.909,7.909c0.381,0.381,0.381,1,0,1.381  C32.333,11.096,31.715,11.096,31.334,10.715z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+        
+                        <div class="options">
+                            <?xml version="1.0" ?><svg class="bi bi-three-dots" fill="currentColor" height="20"
+                                viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://i.pinimg.com/564x/91/02/6b/91026b4802025c0ac38329e7cab1c113.jpg" alt="21">
+            </div>
+
+            <div class="card-image">
+                <div class="btn-container">
+                    <div class="img-btn">
+                        <input type="button" value="Guardar">
+                    </div>
+                    <div class="share-options">
+                        <div class="share-icon">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                enable-background="new 0 0 48 48" height="48px" id="Layer_1" version="1.1"
+                                viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path clip-rule="evenodd"
+                                    d="M34,47H14c-2.762,0-5-2.238-5-5V24c0-2.761,2.238-5,5-5h4c0.553,0,1,0.448,1,1  s-0.447,1-1,1h-4c-1.656,0-3,1.344-3,3v18c0,1.657,1.344,3,3,3h20c1.657,0,3-1.343,3-3V24c0-1.656-1.343-3-3-3h-4  c-0.553,0-1-0.448-1-1s0.447-1,1-1h4c2.762,0,5,2.239,5,5v18C39,44.762,36.762,47,34,47z M31.334,10.715L25,4.381V30  c0,0.553-0.447,1-1,1s-1-0.447-1-1V4.381l-6.334,6.334c-0.381,0.381-0.999,0.381-1.381,0c-0.381-0.381-0.381-1,0-1.381l7.905-7.905  c0.032-0.047,0.053-0.101,0.095-0.144c0.195-0.194,0.451-0.287,0.705-0.283C23.994,1.002,23.996,1,24,1s0.007,0.002,0.01,0.002  c0.256-0.003,0.511,0.089,0.705,0.283c0.041,0.042,0.06,0.094,0.091,0.14l7.909,7.909c0.381,0.381,0.381,1,0,1.381  C32.333,11.096,31.715,11.096,31.334,10.715z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+        
+                        <div class="options">
+                            <?xml version="1.0" ?><svg class="bi bi-three-dots" fill="currentColor" height="20"
+                                viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://i.pinimg.com/564x/f9/8a/0e/f98a0ef912382888729dbd469455d7ee.jpg" alt="22">
+            </div>
+
+            <div class="card-image">
+                <div class="btn-container">
+                    <div class="img-btn">
+                        <input type="button" value="Guardar">
+                    </div>
+                    <div class="share-options">
+                        <div class="share-icon">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                enable-background="new 0 0 48 48" height="48px" id="Layer_1" version="1.1"
+                                viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path clip-rule="evenodd"
+                                    d="M34,47H14c-2.762,0-5-2.238-5-5V24c0-2.761,2.238-5,5-5h4c0.553,0,1,0.448,1,1  s-0.447,1-1,1h-4c-1.656,0-3,1.344-3,3v18c0,1.657,1.344,3,3,3h20c1.657,0,3-1.343,3-3V24c0-1.656-1.343-3-3-3h-4  c-0.553,0-1-0.448-1-1s0.447-1,1-1h4c2.762,0,5,2.239,5,5v18C39,44.762,36.762,47,34,47z M31.334,10.715L25,4.381V30  c0,0.553-0.447,1-1,1s-1-0.447-1-1V4.381l-6.334,6.334c-0.381,0.381-0.999,0.381-1.381,0c-0.381-0.381-0.381-1,0-1.381l7.905-7.905  c0.032-0.047,0.053-0.101,0.095-0.144c0.195-0.194,0.451-0.287,0.705-0.283C23.994,1.002,23.996,1,24,1s0.007,0.002,0.01,0.002  c0.256-0.003,0.511,0.089,0.705,0.283c0.041,0.042,0.06,0.094,0.091,0.14l7.909,7.909c0.381,0.381,0.381,1,0,1.381  C32.333,11.096,31.715,11.096,31.334,10.715z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+        
+                        <div class="options">
+                            <?xml version="1.0" ?><svg class="bi bi-three-dots" fill="currentColor" height="20"
+                                viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://i.pinimg.com/564x/c2/d2/6a/c2d26a3c267d1e6bc6015cd10a3e9ca2.jpg" alt="23">
+            </div>
+            <div class="card-image">
+                <div class="btn-container">
+                    <div class="img-btn">
+                        <input type="button" value="Guardar">
+                    </div>
+                    <div class="share-options">
+                        <div class="share-icon">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                enable-background="new 0 0 48 48" height="48px" id="Layer_1" version="1.1"
+                                viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path clip-rule="evenodd"
+                                    d="M34,47H14c-2.762,0-5-2.238-5-5V24c0-2.761,2.238-5,5-5h4c0.553,0,1,0.448,1,1  s-0.447,1-1,1h-4c-1.656,0-3,1.344-3,3v18c0,1.657,1.344,3,3,3h20c1.657,0,3-1.343,3-3V24c0-1.656-1.343-3-3-3h-4  c-0.553,0-1-0.448-1-1s0.447-1,1-1h4c2.762,0,5,2.239,5,5v18C39,44.762,36.762,47,34,47z M31.334,10.715L25,4.381V30  c0,0.553-0.447,1-1,1s-1-0.447-1-1V4.381l-6.334,6.334c-0.381,0.381-0.999,0.381-1.381,0c-0.381-0.381-0.381-1,0-1.381l7.905-7.905  c0.032-0.047,0.053-0.101,0.095-0.144c0.195-0.194,0.451-0.287,0.705-0.283C23.994,1.002,23.996,1,24,1s0.007,0.002,0.01,0.002  c0.256-0.003,0.511,0.089,0.705,0.283c0.041,0.042,0.06,0.094,0.091,0.14l7.909,7.909c0.381,0.381,0.381,1,0,1.381  C32.333,11.096,31.715,11.096,31.334,10.715z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+        
+                        <div class="options">
+                            <?xml version="1.0" ?><svg class="bi bi-three-dots" fill="currentColor" height="20"
+                                viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://i.pinimg.com/564x/7d/f1/42/7df14262a5779a51ed48651f6e32de1f.jpg" alt="24">
+            </div>
+            <div class="card-image">
+                <div class="btn-container">
+                    <div class="img-btn">
+                        <input type="button" value="Guardar">
+                    </div>
+                    <div class="share-options">
+                        <div class="share-icon">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                enable-background="new 0 0 48 48" height="48px" id="Layer_1" version="1.1"
+                                viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path clip-rule="evenodd"
+                                    d="M34,47H14c-2.762,0-5-2.238-5-5V24c0-2.761,2.238-5,5-5h4c0.553,0,1,0.448,1,1  s-0.447,1-1,1h-4c-1.656,0-3,1.344-3,3v18c0,1.657,1.344,3,3,3h20c1.657,0,3-1.343,3-3V24c0-1.656-1.343-3-3-3h-4  c-0.553,0-1-0.448-1-1s0.447-1,1-1h4c2.762,0,5,2.239,5,5v18C39,44.762,36.762,47,34,47z M31.334,10.715L25,4.381V30  c0,0.553-0.447,1-1,1s-1-0.447-1-1V4.381l-6.334,6.334c-0.381,0.381-0.999,0.381-1.381,0c-0.381-0.381-0.381-1,0-1.381l7.905-7.905  c0.032-0.047,0.053-0.101,0.095-0.144c0.195-0.194,0.451-0.287,0.705-0.283C23.994,1.002,23.996,1,24,1s0.007,0.002,0.01,0.002  c0.256-0.003,0.511,0.089,0.705,0.283c0.041,0.042,0.06,0.094,0.091,0.14l7.909,7.909c0.381,0.381,0.381,1,0,1.381  C32.333,11.096,31.715,11.096,31.334,10.715z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+        
+                        <div class="options">
+                            <?xml version="1.0" ?><svg class="bi bi-three-dots" fill="currentColor" height="20"
+                                viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://i.pinimg.com/564x/55/1a/d3/551ad33ea66bba2c626f3be7fe3129e5.jpg" alt="25">
+            </div>
+            <div class="card-image">
+                <div class="btn-container">
+                    <div class="img-btn">
+                        <input type="button" value="Guardar">
+                    </div>
+                    <div class="share-options">
+                        <div class="share-icon">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                enable-background="new 0 0 48 48" height="48px" id="Layer_1" version="1.1"
+                                viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path clip-rule="evenodd"
+                                    d="M34,47H14c-2.762,0-5-2.238-5-5V24c0-2.761,2.238-5,5-5h4c0.553,0,1,0.448,1,1  s-0.447,1-1,1h-4c-1.656,0-3,1.344-3,3v18c0,1.657,1.344,3,3,3h20c1.657,0,3-1.343,3-3V24c0-1.656-1.343-3-3-3h-4  c-0.553,0-1-0.448-1-1s0.447-1,1-1h4c2.762,0,5,2.239,5,5v18C39,44.762,36.762,47,34,47z M31.334,10.715L25,4.381V30  c0,0.553-0.447,1-1,1s-1-0.447-1-1V4.381l-6.334,6.334c-0.381,0.381-0.999,0.381-1.381,0c-0.381-0.381-0.381-1,0-1.381l7.905-7.905  c0.032-0.047,0.053-0.101,0.095-0.144c0.195-0.194,0.451-0.287,0.705-0.283C23.994,1.002,23.996,1,24,1s0.007,0.002,0.01,0.002  c0.256-0.003,0.511,0.089,0.705,0.283c0.041,0.042,0.06,0.094,0.091,0.14l7.909,7.909c0.381,0.381,0.381,1,0,1.381  C32.333,11.096,31.715,11.096,31.334,10.715z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+        
+                        <div class="options">
+                            <?xml version="1.0" ?><svg class="bi bi-three-dots" fill="currentColor" height="20"
+                                viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://i.pinimg.com/564x/40/16/78/401678a2a327c861e5a8a6d06d5512dd.jpg" alt="26">
+            </div>
+            <div class="card-image">
+                <div class="btn-container">
+                    <div class="img-btn">
+                        <input type="button" value="Guardar">
+                    </div>
+                    <div class="share-options">
+                        <div class="share-icon">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                enable-background="new 0 0 48 48" height="48px" id="Layer_1" version="1.1"
+                                viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path clip-rule="evenodd"
+                                    d="M34,47H14c-2.762,0-5-2.238-5-5V24c0-2.761,2.238-5,5-5h4c0.553,0,1,0.448,1,1  s-0.447,1-1,1h-4c-1.656,0-3,1.344-3,3v18c0,1.657,1.344,3,3,3h20c1.657,0,3-1.343,3-3V24c0-1.656-1.343-3-3-3h-4  c-0.553,0-1-0.448-1-1s0.447-1,1-1h4c2.762,0,5,2.239,5,5v18C39,44.762,36.762,47,34,47z M31.334,10.715L25,4.381V30  c0,0.553-0.447,1-1,1s-1-0.447-1-1V4.381l-6.334,6.334c-0.381,0.381-0.999,0.381-1.381,0c-0.381-0.381-0.381-1,0-1.381l7.905-7.905  c0.032-0.047,0.053-0.101,0.095-0.144c0.195-0.194,0.451-0.287,0.705-0.283C23.994,1.002,23.996,1,24,1s0.007,0.002,0.01,0.002  c0.256-0.003,0.511,0.089,0.705,0.283c0.041,0.042,0.06,0.094,0.091,0.14l7.909,7.909c0.381,0.381,0.381,1,0,1.381  C32.333,11.096,31.715,11.096,31.334,10.715z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+        
+                        <div class="options">
+                            <?xml version="1.0" ?><svg class="bi bi-three-dots" fill="currentColor" height="20"
+                                viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://i.pinimg.com/564x/d1/cd/e1/d1cde1b3347180f703e9cc2760e42629.jpg" alt="27">
+            </div>
+            <div class="card-image">
+                <div class="btn-container">
+                    <div class="img-btn">
+                        <input type="button" value="Guardar">
+                    </div>
+                    <div class="share-options">
+                        <div class="share-icon">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                enable-background="new 0 0 48 48" height="48px" id="Layer_1" version="1.1"
+                                viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path clip-rule="evenodd"
+                                    d="M34,47H14c-2.762,0-5-2.238-5-5V24c0-2.761,2.238-5,5-5h4c0.553,0,1,0.448,1,1  s-0.447,1-1,1h-4c-1.656,0-3,1.344-3,3v18c0,1.657,1.344,3,3,3h20c1.657,0,3-1.343,3-3V24c0-1.656-1.343-3-3-3h-4  c-0.553,0-1-0.448-1-1s0.447-1,1-1h4c2.762,0,5,2.239,5,5v18C39,44.762,36.762,47,34,47z M31.334,10.715L25,4.381V30  c0,0.553-0.447,1-1,1s-1-0.447-1-1V4.381l-6.334,6.334c-0.381,0.381-0.999,0.381-1.381,0c-0.381-0.381-0.381-1,0-1.381l7.905-7.905  c0.032-0.047,0.053-0.101,0.095-0.144c0.195-0.194,0.451-0.287,0.705-0.283C23.994,1.002,23.996,1,24,1s0.007,0.002,0.01,0.002  c0.256-0.003,0.511,0.089,0.705,0.283c0.041,0.042,0.06,0.094,0.091,0.14l7.909,7.909c0.381,0.381,0.381,1,0,1.381  C32.333,11.096,31.715,11.096,31.334,10.715z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+        
+                        <div class="options">
+                            <?xml version="1.0" ?><svg class="bi bi-three-dots" fill="currentColor" height="20"
+                                viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://i.pinimg.com/564x/07/29/74/0729748c0d5cd4aa7c421c85df10cdc2.jpg" alt="28">
+            </div>
+
+            <div class="card-image">
+                <div class="btn-container">
+                    <div class="img-btn">
+                        <input type="button" value="Guardar">
+                    </div>
+                    <div class="share-options">
+                        <div class="share-icon">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                enable-background="new 0 0 48 48" height="48px" id="Layer_1" version="1.1"
+                                viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path clip-rule="evenodd"
+                                    d="M34,47H14c-2.762,0-5-2.238-5-5V24c0-2.761,2.238-5,5-5h4c0.553,0,1,0.448,1,1  s-0.447,1-1,1h-4c-1.656,0-3,1.344-3,3v18c0,1.657,1.344,3,3,3h20c1.657,0,3-1.343,3-3V24c0-1.656-1.343-3-3-3h-4  c-0.553,0-1-0.448-1-1s0.447-1,1-1h4c2.762,0,5,2.239,5,5v18C39,44.762,36.762,47,34,47z M31.334,10.715L25,4.381V30  c0,0.553-0.447,1-1,1s-1-0.447-1-1V4.381l-6.334,6.334c-0.381,0.381-0.999,0.381-1.381,0c-0.381-0.381-0.381-1,0-1.381l7.905-7.905  c0.032-0.047,0.053-0.101,0.095-0.144c0.195-0.194,0.451-0.287,0.705-0.283C23.994,1.002,23.996,1,24,1s0.007,0.002,0.01,0.002  c0.256-0.003,0.511,0.089,0.705,0.283c0.041,0.042,0.06,0.094,0.091,0.14l7.909,7.909c0.381,0.381,0.381,1,0,1.381  C32.333,11.096,31.715,11.096,31.334,10.715z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+        
+                        <div class="options">
+                            <?xml version="1.0" ?><svg class="bi bi-three-dots" fill="currentColor" height="20"
+                                viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://i.pinimg.com/564x/41/83/d1/4183d1face233059b5fa6d532020f0ab.jpg" alt="">
+            </div>
+
+            <div class="card-image">
+                <div class="btn-container">
+                    <div class="img-btn">
+                        <input type="button" value="Guardar">
+                    </div>
+                    <div class="share-options">
+                        <div class="share-icon">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                enable-background="new 0 0 48 48" height="48px" id="Layer_1" version="1.1"
+                                viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path clip-rule="evenodd"
+                                    d="M34,47H14c-2.762,0-5-2.238-5-5V24c0-2.761,2.238-5,5-5h4c0.553,0,1,0.448,1,1  s-0.447,1-1,1h-4c-1.656,0-3,1.344-3,3v18c0,1.657,1.344,3,3,3h20c1.657,0,3-1.343,3-3V24c0-1.656-1.343-3-3-3h-4  c-0.553,0-1-0.448-1-1s0.447-1,1-1h4c2.762,0,5,2.239,5,5v18C39,44.762,36.762,47,34,47z M31.334,10.715L25,4.381V30  c0,0.553-0.447,1-1,1s-1-0.447-1-1V4.381l-6.334,6.334c-0.381,0.381-0.999,0.381-1.381,0c-0.381-0.381-0.381-1,0-1.381l7.905-7.905  c0.032-0.047,0.053-0.101,0.095-0.144c0.195-0.194,0.451-0.287,0.705-0.283C23.994,1.002,23.996,1,24,1s0.007,0.002,0.01,0.002  c0.256-0.003,0.511,0.089,0.705,0.283c0.041,0.042,0.06,0.094,0.091,0.14l7.909,7.909c0.381,0.381,0.381,1,0,1.381  C32.333,11.096,31.715,11.096,31.334,10.715z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+        
+                        <div class="options">
+                            <?xml version="1.0" ?><svg class="bi bi-three-dots" fill="currentColor" height="20"
+                                viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://i.pinimg.com/564x/7d/10/07/7d100768acd83c88583d2a22a969f965.jpg" alt="">
+            </div>
+            <div class="card-image">
+                <div class="btn-container">
+                    <div class="img-btn">
+                        <input type="button" value="Guardar">
+                    </div>
+                    <div class="share-options">
+                        <div class="share-icon">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                enable-background="new 0 0 48 48" height="48px" id="Layer_1" version="1.1"
+                                viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path clip-rule="evenodd"
+                                    d="M34,47H14c-2.762,0-5-2.238-5-5V24c0-2.761,2.238-5,5-5h4c0.553,0,1,0.448,1,1  s-0.447,1-1,1h-4c-1.656,0-3,1.344-3,3v18c0,1.657,1.344,3,3,3h20c1.657,0,3-1.343,3-3V24c0-1.656-1.343-3-3-3h-4  c-0.553,0-1-0.448-1-1s0.447-1,1-1h4c2.762,0,5,2.239,5,5v18C39,44.762,36.762,47,34,47z M31.334,10.715L25,4.381V30  c0,0.553-0.447,1-1,1s-1-0.447-1-1V4.381l-6.334,6.334c-0.381,0.381-0.999,0.381-1.381,0c-0.381-0.381-0.381-1,0-1.381l7.905-7.905  c0.032-0.047,0.053-0.101,0.095-0.144c0.195-0.194,0.451-0.287,0.705-0.283C23.994,1.002,23.996,1,24,1s0.007,0.002,0.01,0.002  c0.256-0.003,0.511,0.089,0.705,0.283c0.041,0.042,0.06,0.094,0.091,0.14l7.909,7.909c0.381,0.381,0.381,1,0,1.381  C32.333,11.096,31.715,11.096,31.334,10.715z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+        
+                        <div class="options">
+                            <?xml version="1.0" ?><svg class="bi bi-three-dots" fill="currentColor" height="20"
+                                viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://i.pinimg.com/564x/34/84/d9/3484d962fe600f4c7f93ad2938fc9afd.jpg" alt="">
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>
